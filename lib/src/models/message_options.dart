@@ -29,6 +29,7 @@ class MessageOptions {
     this.timeFormat,
     this.messageTimeBuilder,
     this.messageMediaBuilder,
+    this.imageErrorBuilder
   });
 
   /// Format of the time if [showTime] is true
@@ -102,6 +103,10 @@ class MessageOptions {
   /// Builder to create your own media container widget
   final Widget Function(ChatMessage message, ChatMessage? previousMessage,
       ChatMessage? nextMessage)? messageMediaBuilder;
+  
+  /// Builder to create your own media container widget
+  final Widget Function(BuildContext context, Object exception, StackTrace? stackTrace)? 
+      imageErrorBuilder;
 
   /// Builder to create your own time widget
   /// (shown under the text when [showTime] is true)
