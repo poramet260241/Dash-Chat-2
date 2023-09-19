@@ -10,6 +10,7 @@ class InputOptions {
     this.onMentionTriggers = const <String>['@'],
     this.onTextChange,
     this.inputDisabled = false,
+    this.inputHide = false,
     this.inputDecoration,
     this.textCapitalization = TextCapitalization.none,
     this.alwaysShowSend = false,
@@ -64,6 +65,8 @@ class InputOptions {
 
   /// To make the input disabled
   final bool inputDisabled;
+
+  final bool inputHide;
 
   /// Input decoration to customize the design of the input
   /// You can use defaultInputDecoration to only orride some variables
